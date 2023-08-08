@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #ff6a00;
+    --white: #ffffffd4;
+}
+body {
+    height: 100vh;
+    background-image: url(/media/desktop-wallpaper-trippy-acid-fractals-tunnels-trippy-lsd-acid-trippy-mandala.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner .btn {
+    color: var(--white); /* Set the color to white for the links */
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}   
+
+.banner .cover {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.banner .contentBx {
+    position: relative;
+    z-index: 1;
+    background: rgba(214, 149, 17, 0.244);
+    border-radius: 2%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner .contentBx h2 {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--black);
+      -webkit-text-stroke: 1px rgb(130, 40, 40);
+
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner .contentBx h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .banner .cover {
+        animation: App-logo-spin infinite 70s linear;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    .banner .cover {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+    header.sticky {
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .banner .contentBx {
+        padding: 40px 30px;
+    }
+}
