@@ -1,4 +1,4 @@
-var audio = document.getElementById('bg-music');
+let audio = document.getElementById('bg-music');
 
 function playPause() {
     if (audio.paused) {
