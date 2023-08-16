@@ -18,7 +18,10 @@ body {
     background-position: center;
     overflow: hidden;
     position: relative;
+    
 }
+
+
 .banner {
     position: relative;
     display: flex;
@@ -86,11 +89,20 @@ body {
         transform: rotate(360deg);
     }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    .banner .cover {
-        animation: App-logo-spin infinite 30s linear;
-    }
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url(/media/desktop-wallpaper-trippy-acid-fractals-tunnels-trippy-lsd-acid-trippy-mandala.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: -1;
+    animation: App-logo-spin infinite 30s linear;
 }
 
 @media (max-width: 991px) {
