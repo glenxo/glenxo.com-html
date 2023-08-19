@@ -71,12 +71,22 @@ body {
     text-transform: uppercase;
 }
 
+#home > div > a{
+    color: var(--black);
+    -webkit-text-stroke: 1px rgb(130, 40, 40);
+      text-align: center;
+       justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .banner .contentBx h4 {
     font-size: 1.2em;
     font-weight: 300;
     letter-spacing: 4px;
     text-align: center;
     text-transform: uppercase;
+    
 }
 
 @keyframes App-logo-spin {
