@@ -102,8 +102,29 @@ body::before {
     background-repeat: no-repeat;
     overflow: hidden;
     z-index: -1;
-    animation: App-logo-spin infinite 30s linear;
+    animation: App-logo-spin infinite 100s linear;
 }
+
+/*audio section starts*/
+/* Target the banner section */
+
+  
+  /* Target the heading elements */
+  .banner h2, .banner h4 {
+    /* Add your desired styles here */
+  }
+  
+  /* Target the buttons */
+  .banner .btn {
+    /* Add your desired styles here */
+  }
+  
+  /* Target the audio controls */
+  .banner audio {
+    /* Add your desired styles here */
+  }
+
+/*audio section ends*/
 
 @media (max-width: 991px) {
     header {
