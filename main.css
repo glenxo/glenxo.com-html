@@ -7,20 +7,19 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --black: #ff6a00d2;
     --white: #ffffffd4;
 }
+
 body {
     height: 100vh;
     background-image: url(/media/desktop-wallpaper-trippy-acid-fractals-tunnels-trippy-lsd-acid-trippy-mandala.jpg);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
     position: relative;
-    
 }
-
 
 .banner {
     position: relative;
@@ -32,13 +31,13 @@ body {
 }
 
 .banner .btn {
-    color: var(--white); /* Set the color to white for the links */
+    color: var(--white);
     text-decoration: none;
     margin-top: 20px;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-}   
+}
 
 .banner .cover {
     position: absolute;
@@ -66,8 +65,7 @@ body {
     font-size: 2em;
     font-weight: 500;
     color: var(--black);
-      -webkit-text-stroke: 1px rgb(130, 40, 40);
-
+    -webkit-text-stroke: 1px rgb(130, 40, 40);
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
@@ -89,6 +87,7 @@ body {
         transform: rotate(360deg);
     }
 }
+
 body::before {
     content: "";
     position: fixed;
@@ -106,23 +105,41 @@ body::before {
 }
 
 /*audio section starts*/
-/* Target the banner section */
+/* Target the heading elements */
+.banner h2{
+    margin-bottom: 2rem;
+}
+.banner h4 {
+    margin-bottom: -1.5rem;
+        margin-top: -1.5rem;
+
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--black);
+    -webkit-text-stroke: 1px rgb(100, 222, 25);
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;}
+
+/* Target the buttons */
 
   
-  /* Target the heading elements */
-  .banner h2, .banner h4 {
-    /* Add your desired styles here */
+  .banner .btn:hover {
+    background-color: #45a049; /* Change the background color on hover */
   }
-  
-  /* Target the buttons */
-  .banner .btn {
-    /* Add your desired styles here */
-  }
-  
-  /* Target the audio controls */
-  .banner audio {
-    /* Add your desired styles here */
-  }
+
+    .banner .btn {
+        color: #45a049;
+            width: 2rem;
+    height: 2rem;
+   }
+
+/* Target the audio controls */
+.banner audio {
+    color: #45a049;
+        width: 12rem;
+    height: 2rem;
+}
 
 /*audio section ends*/
 
@@ -132,14 +149,14 @@ body::before {
     }
 
     .banner .cover {
-    position: absolute;
-    top: 10;
-    left: 10;
-    width: 100%;
-    height: auto;
-    object-fit: fill;
-    z-index: -1;
-}
+        position: absolute;
+        top: 10;
+        left: 10;
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        z-index: -1;
+    }
 
     header.sticky {
         padding: 10px 20px;
