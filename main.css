@@ -175,10 +175,8 @@ body::before {
     height: 2rem;
 }
 
-#home > div.share > a.fab.fa-twiter,
 #home > div.share > a.fab.fa-facebook,
-#home > div.share > a.fab.fa-linkedin,
-#home > div.share > a.fab.fa-instagram{
+#home > div.share > a.fab.fa-instagram  {
     margin: 14px;
 }
 
@@ -193,10 +191,8 @@ body::before {
     margin-bottom: 100%;
 }
 
-#home > div.share > a.fab.fa-twiter,
 #home > div.share > a.fab.fa-facebook,
-#home > div.share > a.fab.fa-linkedin,
-#home > div.share > a.fab.fa-instagram{
+#home > div.share > a.fab.fa-instagram {
     margin: 22px;
 }
     .share {
