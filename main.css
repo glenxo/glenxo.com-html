@@ -69,6 +69,7 @@ body {
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 40%;
 }
 
 #home > div > a{
@@ -89,6 +90,27 @@ body {
     
 }
 
+
+/* styles.css */
+.share {
+    position: absolute;
+    display: flexbox;
+    gap: 10px;
+    font-size: 24px;
+    margin-top: 30%;
+}
+
+.fab {
+    color: #333; /* Icon color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.fab:hover {
+    color: #007bff; /* Icon color on hover */
+}
+
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -97,6 +119,8 @@ body {
         transform: rotate(360deg);
     }
 }
+
+
 
 body::before {
     content: "";
@@ -151,11 +175,34 @@ body::before {
     height: 2rem;
 }
 
+#home > div.share > a.fab.fa-twiter,
+#home > div.share > a.fab.fa-facebook,
+#home > div.share > a.fab.fa-linkedin,
+#home > div.share > a.fab.fa-instagram{
+    margin: 14px;
+}
+
 /*audio section ends*/
 
 @media (max-width: 991px) {
     header {
         padding: 20px 20px;
+    }
+
+    .banner .contentBx h2 {
+    margin-bottom: 100%;
+}
+
+#home > div.share > a.fab.fa-twiter,
+#home > div.share > a.fab.fa-facebook,
+#home > div.share > a.fab.fa-linkedin,
+#home > div.share > a.fab.fa-instagram{
+    margin: 22px;
+}
+    .share {
+        margin-top: 150%;
+        padding: 10px 20px;
+
     }
 
     .banner .cover {
