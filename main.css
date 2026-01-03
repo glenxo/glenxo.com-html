@@ -1,225 +1,112 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-
-:root {
-    --black: #ff6a00d2;
-    --white: #ffffffd4;
+/* ===============================
+   CONFETTI CONTAINER
+================================ */
+/* ===============================
+   PAGE LAYOUT (CENTER QUIZ)
+================================ */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    height: 100vh;
-    background-image: url(/media/desktop-wallpaper-trippy-acid-fractals-tunnels-trippy-lsd-acid-trippy-mandala.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2; /* optional */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.banner .btn {
-    color: var(--white);
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.banner .cover {
-    position: absolute;
-    top: 10;
-    left: 10;
-    width: 80%;
-    height: auto;
-    object-fit: fill;
-    z-index: -1;
-}
-
-.banner .contentBx {
-    position: relative;
-    z-index: 1;
-    background: rgba(214, 148, 17, 0);
-    border-radius: 2%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.banner .contentBx h2 {
-    font-size: 2em;
-    font-weight: 500;
-    color: var(--black);
-    -webkit-text-stroke: 1px rgb(130, 40, 40);
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40%;
-}
-
-#home > div > a{
-    color: var(--black);
-    -webkit-text-stroke: 1px rgb(130, 40, 40);
-      text-align: center;
-       justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.banner .contentBx h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-align: center;
-    text-transform: uppercase;
-    
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 400px;
+  position: relative;
 }
 
 
-/* styles.css */
-.share {
-    position: absolute;
-    display: flexbox;
-    gap: 10px;
-    font-size: 24px;
-    margin-top: 30%;
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
 }
 
-.fab {
-    color: #333; /* Icon color */
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+/* Individual confetti pieces */
+.confetti-piece {
+  position: fixed;
+  width: 12px;
+  height: 16px;
+  border-radius: 4px;
+  opacity: 0.95;
+  box-shadow: 0 0 6px rgba(255,255,255,0.6);
+  animation: confettiFall 1.2s cubic-bezier(.15,.6,.3,1) forwards;
 }
 
-.fab:hover {
-    color: #007bff; /* Icon color on hover */
-}
-
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-body::before {
-    content: "";
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background-image: url(/media/desktop-wallpaper-trippy-acid-fractals-tunnels-trippy-lsd-acid-trippy-mandala.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    z-index: -1;
-    animation: App-logo-spin infinite 100s linear;
-}
-
-/*audio section starts*/
-/* Target the heading elements */
-.banner h2{
-    margin-bottom: 2rem;
-}
-.banner h4 {
-    margin-bottom: -1.5rem;
-        margin-top: -1.5rem;
-
-    font-size: 2em;
-    font-weight: 500;
-    color: var(--black);
-    -webkit-text-stroke: 1px rgb(100, 222, 25);
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;}
-
-/* Target the buttons */
-
-  
-  .banner .btn:hover {
-    background-color: #45a049; /* Change the background color on hover */
+/* Confetti motion */
+@keyframes confettiFall {
+  0% {
+    transform: translate(-50%, -120vh) rotate(0deg);
   }
-
-    .banner .btn {
-        color: #45a049;
-            width: 2rem;
-    height: 2rem;
-   }
-
-/* Target the audio controls */
-.banner audio {
-    color: #45a049;
-        width: 12rem;
-    height: 2rem;
+  100% {
+    transform: translate(50%, 120vh) rotate(720deg);
+  }
 }
 
-#home > div.share > a.fab.fa-facebook,
-#home > div.share > a.fab.fa-instagram  {
-    margin: 14px;
+/* ===============================
+   RED BALLOON (CENTERED)
+================================ */
+#balloon {
+  width: 320px;
+  height: 400px;
+  background:
+    radial-gradient(circle at 30% 25%, #ffd1d1, #ff4d4d 35%, #cc0000 70%);
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow:
+    inset -15px -20px 30px rgba(0,0,0,0.15),
+    0 25px 40px rgba(0,0,0,0.25);
 }
 
-/*audio section ends*/
-
-@media (max-width: 991px) {
-    header {
-        padding: 20px 20px;
-    }
-
-    .banner .contentBx h2 {
-    margin-bottom: 100%;
+/* Balloon knot */
+#balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 14px;
+  background: #b30000;
+  border-radius: 50% 50% 60% 60%;
 }
 
-#home > div.share > a.fab.fa-facebook,
-#home > div.share > a.fab.fa-instagram {
-    margin: 22px;
+/* ===============================
+   BALLOON POP ANIMATION
+================================ */
+@keyframes balloonPop {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.7);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+  }
 }
-    .share {
-        margin-top: 150%;
-        padding: 10px 20px;
 
-    }
-
-    .banner .cover {
-        position: absolute;
-        top: 10;
-        left: 10;
-        width: 100%;
-        height: auto;
-        object-fit: fill;
-        z-index: -1;
-    }
-
-    header.sticky {
-        padding: 10px 20px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    .banner .contentBx {
-        padding: 40px 30px;
-    }
+.pop {
+  animation: balloonPop 0.5s cubic-bezier(.25,.9,.4,1) forwards;
 }
