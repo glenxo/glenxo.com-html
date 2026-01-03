@@ -1,31 +1,38 @@
-const audioElements = document.querySelectorAll('audio');
-const playlist = [];
-let currentSongIndex = 0;
+function checkAnswer(value) {
+  if (value === 1) {
+    launchConfetti();
+  } else {
+    popRedBalloon();
+  }
+}
 
-// Extract the source URLs from the audio elements
-audioElements.forEach(audio => {
-    const sourceElement = audio.querySelector('source');
-    if (sourceElement) {
-        playlist.push(sourceElement.src);
-    }
-});
+/* ===== CONFETTI ===== */
+function launchConfetti() {
+  const container = document.getElementById("confetti");
+  container.innerHTML = "";
 
-const playNextSong = () => {
-    currentSongIndex = (currentSongIndex + 1) % playlist.length;
-    const nextAudio = audioElements[currentSongIndex];
+  for (let i = 0; i < 60; i++) {
+    const piece = document.createElement("div");
+    piece.className = "confetti-piece";
 
-    // Pause all audio elements
-    audioElements.forEach(audio => audio.pause());
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.backgroundColor =
+      ["#f44336", "#ffeb3b", "#4caf50", "#2196f3"][Math.floor(Math.random() * 4)];
+    piece.style.animationDelay = Math.random() * 0.4 + "s";
 
-    // Play the next audio
-    nextAudio.play();
-};
+    container.appendChild(piece);
+  }
 
-audioElements.forEach(audio => {
-    audio.addEventListener('ended', playNextSong);
-});
+  setTimeout(() => (container.innerHTML = ""), 1200);
+}
 
-// Start playing the first song
-if (playlist.length > 0) {
-    audioElements[currentSongIndex].play();
+/* ===== BALLOON POP ===== */
+function popRedBalloon() {
+  const balloon = document.getElementById("balloon");
+
+  balloon.classList.remove("pop");
+  void balloon.offsetWidth;
+
+  balloon.style.opacity = "1";
+  balloon.classList.add("pop");
 }
